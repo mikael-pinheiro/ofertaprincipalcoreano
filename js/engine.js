@@ -28,9 +28,7 @@ var QuizState = (function(){
 
 (function Engine(){
   var root = document.getElementById('quiz-root');
-  // Every new page load begins with the quiz introduction.
-  QuizState.reset();
-  var current = 0;
+  var current = QuizState.step();
 
   if (current >= STEPS.length) current = 0;
   var timers = [];
